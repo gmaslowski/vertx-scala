@@ -1,4 +1,6 @@
-import infrastructure.VerticleLogging
+package examples
+
+import infrastructure.{VerticleLogging, VertxComponents}
 
 trait PeriodicListenerExample extends VertxComponents
   with VerticleLogging {

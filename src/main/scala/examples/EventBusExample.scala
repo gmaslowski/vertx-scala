@@ -1,7 +1,9 @@
+package examples
+
 import java.util.Date
 
-import EventBusExample.{MAX_MILLIS, eventAddress}
-import infrastructure.Verticle
+import examples.EventBusExample.{MAX_MILLIS, eventAddress}
+import infrastructure.{Verticle, VertxComponents}
 
 trait EventBusExample extends VertxComponents {
 

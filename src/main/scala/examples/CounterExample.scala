@@ -1,12 +1,12 @@
-import java.util.Date
+package examples
 
-import CounterExample.{MAX_MILLIS, eventAddress}
-import infrastructure.Verticle
+import examples.CounterExample.{MAX_MILLIS, eventAddress}
+import infrastructure.{Verticle, VertxComponents}
 import io.vertx.scala.core.DeploymentOptions
 
 trait CounterExample extends VertxComponents {
 
-  vertx.deployVerticle("scala:SomethingHappenedVerticle", DeploymentOptions().setInstances(7))
+  vertx.deployVerticle("scala:examples.SomethingHappenedVerticle", DeploymentOptions().setInstances(7))
   vertx.deployVerticle(new CountingVerticle)
 
 }
@@ -21,7 +21,6 @@ class SomethingHappenedVerticle extends Verticle {
     val r = scala.util.Random
 
     vertx.setPeriodic(r.nextInt(MAX_MILLIS), _ => {
-      val event = new Date().toString
       vertx.eventBus().publish(eventAddress, Option(""))
     })
   }

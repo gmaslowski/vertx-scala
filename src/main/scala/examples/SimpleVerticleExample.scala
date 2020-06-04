@@ -1,4 +1,6 @@
-import infrastructure.Verticle
+package examples
+
+import infrastructure.{Verticle, VertxComponents}
 
 trait SimpleVerticleExample extends VertxComponents {
   vertx.deployVerticle(new HelloWorldVerticle)

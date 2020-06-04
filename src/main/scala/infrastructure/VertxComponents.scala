@@ -1,3 +1,5 @@
+package infrastructure
+
 import io.vertx.scala.core.Vertx
 
 trait VertxComponents {
