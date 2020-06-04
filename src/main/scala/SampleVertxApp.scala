@@ -3,3 +3,4 @@ object SampleVertxApp extends App
   with ParentVerticleExample
   with PeriodicListenerExample
   with EventBusExample
+  with CounterExample
